@@ -1,6 +1,6 @@
 {
   "name": "@sika7/silver-html-plugin-sanitize",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "silver-html plugin for sanitize.",
   "main": "index.js",
   "scripts": {
