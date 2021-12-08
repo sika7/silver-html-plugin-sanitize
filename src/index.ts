@@ -48,34 +48,34 @@ export function silverHtmlSanitize(
       {
         name: "remove not allow attributes.",
         function: (node: parse5.Element) => {
-          const conf = getConfig(node.tagName, allowTags);
-          if (!conf) return node;
-          const { allowAttrs } = conf;
+          const conf = getConfig(node.tagName, allowTags)!;
+          // # remove not allow tag により必ずconfがある
+          // if (!conf) return node;
 
-          let attrs = node.attrs;
+          const { allowAttrs = [] } = conf;
 
           if (allowAttrs) {
-            attrs.filter((attr) => {
-              if (!allowAttrs.includes(attr.name)) return false;
-              return true;
+            node.attrs = node.attrs.filter((attr) => {
+              if (allowAttrs.includes(attr.name)) return true;
+              return false;
             });
           }
 
-          node.attrs = attrs;
           return node;
         },
       },
       {
         name: "remove not allow style and unknown propertys.",
         function: (node: parse5.Element) => {
-          const conf = getConfig(node.tagName, allowTags);
-          if (!conf) return node;
-          const { allowStyle } = conf;
+          const conf = getConfig(node.tagName, allowTags)!;
 
-          let attrs = node.attrs;
+          // # remove not allow tag により必ずconfがある
+          // if (!conf) return node;
+
+          const { allowStyle = [] } = conf;
 
           if (allowStyle) {
-            attrs.map((attr: parse5.Attribute) => {
+            node.attrs = node.attrs.map((attr: parse5.Attribute) => {
               if (attr.name === "style") {
                 attr.value = postcss([
                   postcssWhitelistSanitize({
@@ -88,7 +88,7 @@ export function silverHtmlSanitize(
               return attr;
             });
           }
-          node.attrs = attrs;
+
           return node;
         },
       },
