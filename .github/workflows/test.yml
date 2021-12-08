@@ -7,7 +7,6 @@ env:
   FORCE_COLOR: 2
 jobs:
   full:
-    name: Node.js 16 Full
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,7 +24,6 @@ jobs:
         node-version:
           - 14
           - 12
-    name: Node.js ${{ matrix.node-version }} Quick
     steps:
       - uses: actions/checkout@v2
       - name: Install Node.js ${{ matrix.node-version }}
