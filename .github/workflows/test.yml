@@ -2,7 +2,7 @@ name: Test
 on:
   push:
     branches:
-      - 'main'
+      [ main ]
 env:
   FORCE_COLOR: 2
 jobs:
@@ -10,9 +10,7 @@ jobs:
     name: Node.js 16 Full
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
       - uses: actions/checkout@v2
-      - name: Install Node.js
       - uses: actions/setup-node@v2
         with:
           node-version: 16
@@ -29,7 +27,6 @@ jobs:
           - 12
     name: Node.js ${{ matrix.node-version }} Quick
     steps:
-      - name: Checkout the repository
       - uses: actions/checkout@v2
       - name: Install Node.js ${{ matrix.node-version }}
       - uses: actions/setup-node@v2
