@@ -13,7 +13,9 @@
     "dist"
   ],
   "keywords": [
-    "html-sanitize"
+    "html-sanitize",
+    "silver-html-plugin",
+    "silver-html"
   ],
   "author": "sika7 <91676209+sika7@users.noreply.github.com>",
   "repository": "https://github.com/sika7/silver-html-plugin-sanitize",
