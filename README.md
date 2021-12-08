@@ -1,4 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Test](https://github.com/sika7/silver-html-plugin-sanitize/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/sika7/silver-html-plugin-sanitize/actions/workflows/test.yml)
 
 # @sika7/silver-html-plugin-sanitize
 
