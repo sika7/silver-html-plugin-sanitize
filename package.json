@@ -2,7 +2,7 @@
   "name": "@sika7/silver-html-plugin-sanitize",
   "version": "1.0.0",
   "description": "silver-html plugin for sanitize.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest --coverage",
     "build": "tsc",
