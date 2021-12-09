@@ -1,7 +1,7 @@
 import { silverHtml } from "@sika7/silver-html";
 import { silverHtmlSanitize } from "./index";
 
-test("remove not arrow tag test.", () => {
+test("remove not allow tag test.", () => {
   const result = silverHtml(
     `
 <div>
@@ -33,7 +33,7 @@ test("remove not arrow tag test.", () => {
 `);
 });
 
-test("multiple config arrow tag test.", () => {
+test("multiple config allow tag test.", () => {
   const result = silverHtml(
     `
 <div>

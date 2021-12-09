@@ -5,28 +5,28 @@ import postcss from "postcss";
 import { SilverHtmlPlugin } from "@sika7/silver-html";
 const postcssWhitelistSanitize = require("@sika7/postcss-whitelist-sanitize");
 
-export interface arrowTag {
+export interface allowTag {
   tag: string;
   allowAttrs?: string[];
   allowStyle?: string[];
 }
 
 export interface silverHtmlSanitizeConfig {
-  allowTags: arrowTag[];
+  allowTags: allowTag[];
 }
 
 export function getConfig(
   tagName: string,
-  arrowTags: arrowTag[]
-): arrowTag | undefined {
-  return arrowTags.find((conf) => conf.tag === tagName);
+  allowTags: allowTag[]
+): allowTag | undefined {
+  return allowTags.find((conf) => conf.tag === tagName);
 }
 
 export function isPermissionElement(
   tagName: string,
-  arrowTags: arrowTag[]
+  allowTags: allowTag[]
 ): boolean {
-  if (arrowTags.find((conf) => conf.tag === tagName)) return true;
+  if (allowTags.find((conf) => conf.tag === tagName)) return true;
   return false;
 }
 
