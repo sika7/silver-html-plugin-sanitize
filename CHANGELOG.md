@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## 1.0.2 - 2021-12-09
+### Fixed
+- Fix type mis for arrow -> allow
+
 ## 1.0.1 - 2021-12-09
 ### Fixed
 - Fix package.json index.js path
