@@ -3,6 +3,10 @@
 ## [Unreleased]
 
 ## 1.0.0 - 2021-12-08
+### Fixed
+- Fix package.json index.js path
+
+## 1.0.0 - 2021-12-08
 ### Added
 - Delete function for unauthorized tags
 - Delete function for unauthorized attributes
